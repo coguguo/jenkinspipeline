@@ -1,0 +1,29 @@
+//script method
+// node{
+//     stage('Build'){
+//         echo "build successful"
+//     }
+//     stage('Test'){
+//         echo "test completed"
+//     }
+// }
+
+
+// declarative method
+pipeline{
+    agent any 
+    stages{
+        stage('Build'){
+            steps{
+                echo "build successful"
+                echo "BUILD_NUMBER- $BUILD_NUMBER"
+                echo "PATH- $PATH"
+            }
+        }
+        stage('Test'){
+            steps{
+                echo "test completed"
+                
+        }
+    }
+}
